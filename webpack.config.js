@@ -5,15 +5,16 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        flename: 'bundle.js'
+        filename: 'bundle.js'
     },
+    mode: 'development',
     resolve: {
         extensions: ['.js', 'jsx'],
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.js|.jsx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
@@ -32,5 +33,5 @@ module.exports = {
             template: './public/index.html',
             filename: './index.html'
         }),
-    ]
+    ],
 }
