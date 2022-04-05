@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<style>
+    :root {
+        --egg_yellow: #FFD36E;
+        --yellow: #FFF56D;
+        --mint-blue: #5ee6a4;
+        --soft-blue: #9FB4FF;
+        --purple-gray: #c5c2df;     
+        --purple-soft-gray: #d2cdfc3a;
+        --gray: #494747;     
+        /* Fuentes */
+        --quick_sand: 'Quicksand', sans-serif;
+        --xs: 1.2rem;
+        --sm: 1.4rem;
+        --md: 1.6rem;
+        --lg: 2rem ;
+        --xl: 2.4rem;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+    }
+    body {
+        font-size: 1.6rem;
+        font-family: var(--quick_sand);
+    }
+    .my-order {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .my-order-container {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: minmax(100%, 36rem);
+    }
+
+    .title {
+        font-size: var(--lg);
+        margin-bottom: 1.2rem;
+        text-align: start;
+        margin-bottom: 4.8rem;
+    }
+    .title i {
+        font-size: var(--xl);
+    }
+    
+    .my-order-content {
+        display: grid;
+        grid-template-rows: repeat(auto-fill, auto);
+    }
+    .my-order-content .my-order-info {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 1fr auto;
+        padding: 1.4rem;
+        background: var(--purple-soft-gray);
+        border-radius: 1rem;
+        font-weight: bold;
+        margin-bottom: 1.2rem;
+        color: var(--gray);
+    }
+    .my-order-content .my-order-info p {
+        display: flex;
+        flex-direction: column;
+    }
+    .my-order-content .my-order-info .date{
+        margin-bottom: .6rem;
+    }
+    .my-order-content .my-order-info .total {
+        font-size: var(--sm);
+        font-weight: normal;
+    }
+    .my-order-content .my-order-info .amount {
+        color: var(--soft-blue);
+        justify-self: flex-end;
+    }
+    .my-order-info .view-order {
+        font-size: var(--lg);
+        font-weight: bold;
+        height: 3rem;
+        width: 3rem;
+        text-align: center;
+        margin-left: .5rem;
+        line-height: 2.5rem;
+        color: var(--mint-blue);
+        border-radius: 100%;
+    }
+    .my-order-info .view-order:hover {
+        background: var(--purple-gray);
+    }
+
+
+</style>
+<body>
+    <div class="my-order">
+        <div class="my-order-container">
+            
+            <h2 class="title">
+                <i class="uil uil-shopping-bag"></i>
+                My Orders
+            </h2>
+
+            <div class="my-order-content">
+                <div class="my-order-info">
+                    <p>
+                        <span class="date">05-04-2022</span>
+                        <span class="total">7 articles</span>
+                    </p>
+                    <span class="amount">Q 560.00</span>
+                    <a href="" class="view-order"><i class="uil uil-angle-right-b"></i></a>
+                </div>
+                <div class="my-order-info">
+                    <p>
+                        <span class="date">05-04-2022</span>
+                        <span class="total">7 articles</span>
+                    </p>
+                    <span class="amount">Q 560.00</span>
+                    <a href="" class="view-order"><i class="uil uil-angle-right-b"></i></a>
+                </div>
+                <div class="my-order-info">
+                    <p>
+                        <span class="date">05-04-2022</span>
+                        <span class="total">7 articles</span>
+                    </p>
+                    <span class="amount">Q 560.00</span>
+                    <a href="" class="view-order"><i class="uil uil-angle-right-b"></i></a>
+                </div>
+                <div class="my-order-info">
+                    <p>
+                        <span class="date">05-04-2022</span>
+                        <span class="total">7 articles</span>
+                    </p>
+                    <span class="amount">Q 560.00</span>
+                    <a href="" class="view-order"><i class="uil uil-angle-right-b"></i></a>
+                </div>
+                <div class="my-order-info">
+                    <p>
+                        <span class="date">05-04-2022</span>
+                        <span class="total">7 articles</span>
+                    </p>
+                    <span class="amount">Q 560.00</span>
+                    <a href="" class="view-order"><i class="uil uil-angle-right-b"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

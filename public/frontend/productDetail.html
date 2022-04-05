@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<style>
+    :root {
+        --egg_yellow: #FFD36E;
+        --yellow: #FFF56D;
+        --mint-blue: #5ee6a4;
+        --soft-blue: #9FB4FF;
+        --purple-gray: #c5c2df;     
+        --purple-soft-gray: #d2cdfc3a;
+        --gray: #494747;     
+        /* Fuentes */
+        --quick_sand: 'Quicksand', sans-serif;
+        --xs: 1.2rem;
+        --sm: 1.4rem;
+        --md: 1.6rem;
+        --lg: 2rem ;
+        --xl: 2.4rem;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+    }
+    body {
+        font-size: 1.6rem;
+        font-family: var(--quick_sand);
+    }
+    .product-detail {
+        max-width: min(100%, 38rem);
+        
+    }
+    .product-detail .close-btn {
+        font-size: var(--xl);
+        color: white;
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+        cursor: pointer;
+        transition: .3s all ease;
+        text-shadow: .1rem .1rem 1.5rem var(--gray);
+    }
+    .product-detail .close-btn:hover {
+        color: var(--mint-blue);
+    }
+
+    .product-detail figure {
+        width: 100%;
+    }
+    .product-detail figure img{
+        max-width: min(100%, 38rem);
+        height: 38rem;
+        object-fit: cover;
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .product-info {
+        margin: 2.4rem 2.4rem 0 2.4rem;
+        color: var(--gray);
+    }
+    .product-info p:nth-child(1) {
+        font-weight: bold;
+        font-size: var(--md);
+        margin-top: 0;
+        margin-bottom: .4rem;
+    }
+    .product-info p:nth-child(2) {
+        font-size: var(--md);
+        color: var(--soft-blue);
+        margin-top: 0;
+        margin-bottom: 3.6rem;
+    }
+
+    .product-info p:nth-child(3) {
+        color: var(--gray);
+        opacity: .8;
+        margin-bottom: 3.6rem;
+    }
+    
+
+    .primary-btn {
+        width: 100%;
+        height: 5rem;
+        border: none;
+        border-radius: 1rem;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        background: var(--soft-blue);
+        color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    .text-btn {
+        font-size: var(--md);
+        font-family: var(--quick_sand);
+        font-weight: bold;
+        position: relative;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        transition: color 0.4s;
+    }
+    .text-btn .cart {
+        font-size: calc(var(--lg) * 1.5);
+        margin-right: .5rem;
+        position: relative;
+    }
+    .text-btn .plus-add {
+        font-size: var(--sm);
+        background: var(--mint-blue);
+        height: 2rem;
+        width: 2rem;
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        border-radius: 100%;
+        top: 0;
+        right: -.5rem;
+    }
+
+    .primary-btn:hover .text-btn {
+        color: var(--gray);
+    }
+    .primary-btn::before,
+    .primary-btn::after {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .primary-btn::before {
+        content: "";
+        background: var(--egg_yellow);
+        width: 120%;
+        left: -10%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(.3,1,.8,1);
+    }
+    .primary-btn:hover::before {
+        transform: translate3d(100%,0,0);
+    }
+    @media (min-width: 640px) {
+        .product-detail {
+            position: absolute;
+            right: 0;
+        }
+    }
+</style>
+<body>
+    <aside class="product-detail">
+        <i class="close-btn uil uil-times-circle"></i>
+        <figure>
+            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+        </figure>
+        <div class="product-info">
+            <p>Q 120.00</p>
+            <p>Bike</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, cum? Nihil cumque et ad eaque quos odio laboriosam dolorum praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, maiores?</p>
+            <button class="primary-btn">
+                <span class="text-btn">
+                    <i class="cart uil uil-shopping-cart-alt">
+                        <i class="plus-add uil uil-plus"></i>
+                    </i>
+                    Add to cart
+                </span>
+            </button>
+        </div>
+    </aside>
+</body>
+</html>
