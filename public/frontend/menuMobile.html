@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    :root {
+        --egg_yellow: #FFD36E;
+        --yellow: #FFF56D;
+        --mint-blue: #5ee6a4;
+        --soft-blue: #9FB4FF;
+        --purple-gray: #c5c2df;     
+        --purple-soft-gray: #d2cdfc3a;
+        --gray: #494747;     
+        /* Fuentes */
+        --quick_sand: 'Quicksand', sans-serif;
+        --xs: 1.2rem;
+        --sm: 1.4rem;
+        --md: 1.6rem;
+        --lg: 2rem ;
+        --xl: 2.4rem;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+    }
+    body {
+        font-size: 1.6rem;
+        font-family: var(--quick_sand);
+    }
+    .menu-mobile {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .menu-mobile ul {
+        list-style: none;
+        margin-bottom: 1.8rem;
+    }   
+    .menu-mobile .categories li:nth-child(1) {
+        text-transform: uppercase;
+        border-bottom: none;
+        padding: 1.4rem 2.4rem;
+        background: var(--purple-soft-gray);
+    }
+    .menu-mobile li {
+        font-weight: bold;
+        font-size: var(--);
+        border-bottom: .1rem solid var(--purple-soft-gray);
+        box-shadow: .1rem .1rem 1rem var(--purple-soft-gray);
+    }
+    .menu-mobile ul:nth-child(2) li:nth-child(1) {
+        border-top: .1rem solid var(--purple-soft-gray);
+    }
+    .menu-mobile a {
+        text-decoration: none;
+        display: flex;
+        color: var(--gray);
+        padding: 1.4rem 2.4rem;
+        width: 100%;
+        cursor: pointer;
+        height: 100%;
+    }
+    .menu-mobile .email {
+        font-size: var(--sm);
+        color: var(--purple-gray);
+        font-weight: 300;
+        padding: 1.4rem 2.4rem;
+    }
+    .signout a {
+        color: var(--mint-blue);
+    }
+    .menu-mobile .footer li { 
+        border-bottom: none;
+    }
+</style>
+<body>
+    <div class="menu-mobile">
+        <ul class="categories">
+            <li>Categories</li>
+            <li>
+                <a href="">All</a>
+            </li>
+            <li>
+                <a href="">memories</a>
+            </li>
+            <li>
+                <a href="">hard disk</a>
+            </li>
+            <li>
+                <a href="">gaming</a>
+            </li>
+            <li>
+                <a href="">video</a>
+            </li>
+            <li>
+                <a href="">cell phones</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="">My orders</a>
+            </li>
+            <li>
+                <a href="">My account</a>
+            </li>
+        </ul>
+        <ul class="footer">
+            <li class="email">sanicThefast@techsotore.com</li>
+            <li class="signout">
+                <a href="">sing out</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
