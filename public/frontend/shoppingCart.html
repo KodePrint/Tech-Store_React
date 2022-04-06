@@ -42,8 +42,10 @@
     }
     .product-detail {
         max-width: min(100%, 38rem);
+        height: 100vh;
         padding: 1rem;
-        
+        display: flex;
+        flex-direction: column;
     }
     .product-detail .close-btn {
         font-size: var(--xl);
@@ -71,6 +73,8 @@
 
     .product-detail .order-container {
         margin: 2.4rem 0;
+        max-height: min(70vh, 70rem);
+        overflow: scroll;
     }
 
     .product-detail .shopping-cart {
@@ -94,10 +98,23 @@
         color: var(--purple-gray);
         font-weight: bold;
     }
-
-    .product-detail .shopping-info {
-        
+    .product-detail .shopping-cart i{
+        font-size: var(--lg);
+        color: var(--purple-gray);
+        transition: .3s all ease;
+        margin-right: .5rem;
     }
+    .product-detail .shopping-cart i:hover {
+        color: var(--mint-blue);
+    }
+    .product-detail .shopping-info {
+        margin-top: auto;
+    }
+
+    .product-detail .shopping-info .my-order-info {
+        height: 5rem;
+    }
+
     
     .product-detail .my-order-info {
         display: flex;
@@ -185,6 +202,7 @@
                 </figure>
                 <p>Bike</p>
                 <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
             </div>
             <div class="shopping-cart">
                 <figure>
@@ -192,6 +210,7 @@
                 </figure>
                 <p>Bike</p>
                 <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
             </div>
             <div class="shopping-cart">
                 <figure>
@@ -199,6 +218,7 @@
                 </figure>
                 <p>Bike</p>
                 <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
             </div>
             <div class="shopping-cart">
                 <figure>
@@ -206,6 +226,71 @@
                 </figure>
                 <p>Bike</p>
                 <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
+            </div>
+            <div class="shopping-cart">
+                <figure>
+                    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                </figure>
+                <p>Bike</p>
+                <p class="price">Q 75.00</p>
+                <i class="uil uil-times-circle"></i>
             </div>
         </div>
 

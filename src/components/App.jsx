@@ -1,8 +1,10 @@
 import React from 'react';
+import '../styles/global.scss'
+import Login from '../containers/Login.jsx'
 
 const App = () => {
     return (
-        <h1>Tech Sotre</h1>
+        <Login/>
     );
 }
 

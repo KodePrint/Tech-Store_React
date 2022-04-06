@@ -1,0 +1,30 @@
+$egg_yellow: #FFD36E;
+$yellow: #FFF56D;
+$mint-blue: #5ee6a4;
+$soft-blue: #9FB4FF;
+$purple-gray: #c5c2df;     
+$purple-soft-gray: #d2cdfc3a;
+$gray: #494747;     
+    /* Fuentes */
+$quick_sand: 'Quicksand', sans-serif;
+$xs: 1.2rem;
+$sm: 1.4rem;
+$md: 1.6rem;
+$lg: 2rem ;
+$xl: 2.4rem;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.6rem;
+    font-family: $quick_sand;
+}
