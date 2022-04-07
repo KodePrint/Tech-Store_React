@@ -1,0 +1,17 @@
+@use '../global.scss' as g;
+
+@media (min-width: 640px) {
+    .navbar {
+        padding: 0 2rem;
+
+        .navbar-right {
+            .email {
+                display: flex;
+            }
+        }
+
+        .burguer-btn {
+            display: none;
+        }
+    }
+}

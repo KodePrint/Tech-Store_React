@@ -1,35 +1,31 @@
 import React from 'react'
-import '../styles/Login.scss'
+import { Navigate, useNavigate } from 'react-router-dom'
+import SecondaryBtn from '../components/SecondaryBtn.jsx'
+import PrimaryBtn from '../components/PrimaryBtn.jsx'
+import '../styles/Login/Login.scss'
+import '../styles/Login/Login640.scss'
 
 const Login = () => {
+
     return (
         <div className="login">
             <div className="form-container">
                 <picture className="logo-container">
-                    <img onerror src alt="TechStore" className="logo" />
+                    <img src="" alt="TechStore" className="logo" />
                 </picture>
-                
-                <form action className="form">
+                <form action="" className="form">
                     <div className="input-group">
                         <input className="input input-email" type="email" id="email" placeholder="Email" autoComplete="off" required />
-                        <i class="uil uil-at"></i>                    </div>
+                        <i className="uil uil-at" />                  
+                    </div>
                     <div className="input-group">
                         <input className="input input-password" type="password" id="password" placeholder="Password" autoComplete="off" required />
-                        <i class="uil uil-key-skeleton"></i>                    </div>
-                    <button type="submit" className="primary-btn login-btn">
-                        <span className="text-btn">
-                            <i class="login-icon uil uil-signin"></i>
-                            Login
-                        </span>
-                    </button>
-                    <a href="#" className="forgot">Forgot my password</a>
+                        <i className="uil uil-key-skeleton" />                  
+                    </div>
+                    <PrimaryBtn secondaryClass={"login-btn"} text={"Login"} iconClass={"login-icon uil uil-signin"} onClick={back}/>
+                    <Link to={'/recovery-password'} className="forgot">Forgot my password</Link>
                 </form>
-                <a href="#" className="secondary-btn signup-btn">
-                    <span className='text-btn'>
-                        <i class="uil uil-user-check"></i>
-                        Signup
-                    </span>
-                </a>
+                <SecondaryBtn scondaryClass={"signup-btn"}text={"Signup"} iconClass={"uil uil-user-check"}/>
             </div>
         </div>
     );

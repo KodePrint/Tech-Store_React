@@ -1,0 +1,74 @@
+@use '../global.scss' as g;
+
+.login {
+    
+    .input-group {
+        width: 100%;
+        border-radius: 1.2rem;
+        background: g.$purple-soft-gray;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 1.8rem;
+        
+        .input {
+            width: 100%;
+            border: none;
+            background: none;
+            display: flex;
+            outline: .2rem solid transparent;
+            height: 4rem;
+            padding-left: 5rem;
+            border-radius: 1.2rem;
+            font-family: g.$quick_sand;
+            transition: .3s all ease;
+        }
+        .input:focus, .input:valid {
+            outline: .3rem solid g.$purple-gray;
+        }
+        
+        i {
+            position: absolute;
+            color: white;
+            font-size: g.$lg;
+            height: 100%;
+            width: 4rem;
+            border-top-left-radius: 1.2rem;
+            border-bottom-left-radius: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: g.$purple-gray;
+            opacity: .3;
+            transition: .3s all ease;
+        }
+        .input:focus + i, .input:valid + i {
+            opacity: 1;
+        }
+    }
+    .login-btn {
+        margin: 1.8rem 0;
+    }
+    .login-icon {
+        display: inline-block;
+        transform: rotateY(180deg);
+    }
+    .forgot {
+        display: flex;
+        justify-content: center;
+        font-size: g.$sm;
+        color: g.$soft-blue;
+        text-decoration: none;
+        margin-bottom: 1.8rem;
+        transition: .3s all ease;
+    }
+    .forgot:hover {
+        font-weight: bold;
+    }
+
+    .signup-btn {
+        min-width: min(100%, 36rem);
+        position: absolute;
+        bottom: 0;
+    }
+}

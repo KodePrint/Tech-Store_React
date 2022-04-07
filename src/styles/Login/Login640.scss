@@ -1,0 +1,15 @@
+@use '../global.scss' as g;
+
+@media (min-width: 640px){
+    .login {
+        .form-container {
+            .logo-container {
+                display: none;
+            }
+        }
+        .signup-btn {
+            position: relative;
+        }
+    }
+}
+
