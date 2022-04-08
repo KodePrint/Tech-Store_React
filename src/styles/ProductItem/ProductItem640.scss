@@ -1,0 +1,26 @@
+@use '../global.scss' as g;
+
+@media (min-width: 640px) {
+    .ProductItem {
+        width: 100%;
+    
+        .ProductItem-img-container {
+            .ProductItem-img {
+                height: 28rem;
+                width: 28rem;
+            }
+        }
+    
+        .ProductItem-info {
+    
+            figure {
+                height: 4rem;
+                width: 4rem;
+    
+                i:nth-child(1) {
+                    font-size: calc(g.$xl * 1.3);
+                }
+            }
+        }
+    }
+}

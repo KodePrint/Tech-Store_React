@@ -1,0 +1,11 @@
+@use '../global.scss' as g;
+
+.ProductList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 16.5rem);
+    justify-content: center;
+    gap: 2.4rem;
+    transition: .3s all ease;
+    max-width: min(100%, 128rem);
+    margin: 0 auto;
+}

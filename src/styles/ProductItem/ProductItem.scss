@@ -1,0 +1,60 @@
+@use '../global.scss' as g;
+
+.ProductItem {
+    width: 100%;
+
+    .ProductItem-img-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .ProductItem-img {
+            width: 16.5rem;
+            height: 16.5rem;
+            object-fit: cover;
+            border-radius: 2rem;
+            transition: .3s all ease;
+        }
+    }
+    
+    .ProductItem-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div p:nth-child(1) {
+            font-weight: bold;
+            font-size: g.$md;
+            margin-top: 1.6rem;
+            margin-bottom: .6rem;
+            color: g.$gray;
+        }
+        div p:nth-child(2) {
+            font-size: g.$sm;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: g.$purple-gray;
+        }
+        figure {
+            background: g.$purple-gray;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            position: relative;
+            transition: .3s all ease;
+
+            &:hover {
+                background: g.$egg-yellow;
+            }
+
+            i:nth-child(1) {
+                color: g.$gray;
+                font-size: g.$xl;
+            }
+        }
+
+    }
+}

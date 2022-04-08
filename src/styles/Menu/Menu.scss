@@ -1,0 +1,65 @@
+@use '../global.scss' as g;
+
+.Menu {
+    width: 16rem;
+    height: 16rem;
+    border: .1rem solid g.$purple-gray;
+    border-radius: .6rem;
+    padding: 0 1.5rem;
+    position: absolute;
+    transition: .6s all ease;
+    top: -16rem;
+    right: 7rem;
+    background: white;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            text-align: end;
+
+            a {
+                color: g.$gray;
+                font-size: g.$sm;
+                text-decoration: none;
+                display: inline-block;
+                margin: 1.5rem 0;
+                font-weight: bold;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+
+                i{
+                    font-size: g.$lg;
+                    margin-right: .5rem;
+                }
+            }
+        }
+
+        li:last-child{
+            border-top: .2rem solid g.$purple-soft-gray;
+
+            a {
+                color: g.$mint-blue;
+                font-weight: bold;
+                transition: .3s all ease;
+
+                &:hover {
+                    color: g.$egg_yellow;
+                }
+            }
+        }
+    }
+}
+
+.Menu.open {
+    transform: translateY(21rem);
+}
+
+@media (max-width: 640px) {
+    .Menu {
+        display: none;
+    }
+}

@@ -1,0 +1,7 @@
+@use '../global.scss' as g;
+
+@media (min-width: 640px) {
+    .ProductList {
+        grid-template-columns: repeat(auto-fill, 28rem);
+    }
+}
