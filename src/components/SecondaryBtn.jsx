@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SecondaryBtn = ({secondaryClass, iconClass, text}) => {
+const SecondaryBtn = ({secondaryClass, iconClass, text, event}) => {
     return (
-        <button className={"secondary-btn " + secondaryClass} onClick={console.log}>
+        <button className={"secondary-btn " + secondaryClass} onClick={event}>
             <span className="text-btn">
                 <i className={iconClass} />
                 {text}

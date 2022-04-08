@@ -1,15 +1,14 @@
 import React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import PrimaryBtn from '../components/PrimaryBtn.jsx'
-import '../styles/RecoveryPassword/Recovery.scss'
-import '../styles/RecoveryPassword/Recovery640.scss'
+import '../styles/SendEmail/SendEmail.scss'
+import '../styles/SendEmail/SendEmail640.scss'
 
-const RecoveryPassword = () => {
+const SendEmail = () => {
     let navigate = useNavigate();
 
-    const back = () => {
-        console.log('Hiciste click')
-        return navigate('/login')
+    function backLogin() {
+        navigate('/login')
     }
 
     return (
@@ -23,7 +22,7 @@ const RecoveryPassword = () => {
                 <figure className="img-container">
                     <i className="uil uil-envelope-check"></i>
                 </figure>
-                <PrimaryBtn secondaryClass={"password-btn"} text={"Back to Login"} iconClass={"uil uil-history-alt"} onClick={back()} />
+                <PrimaryBtn secondaryClass={"password-btn"} text={"Back to Login"} iconClass={"uil uil-history-alt"} event={backLogin} />
                 <p className="text-info">Didn't recived the email?</p>
                 <a href="#" className="resend-email">Click here to <span>Resend</span></a>
             </div>
@@ -31,4 +30,4 @@ const RecoveryPassword = () => {
     );
 }
 
-export default RecoveryPassword;
+export default SendEmail;
