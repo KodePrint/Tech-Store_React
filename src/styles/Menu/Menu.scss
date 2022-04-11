@@ -1,12 +1,14 @@
 @use '../global.scss' as g;
 
 .Menu {
-    width: 16rem;
+    width: 20rem;
     height: 16rem;
     border: .1rem solid g.$purple-gray;
-    border-radius: .6rem;
+    // border-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+    border-bottom-left-radius: .6rem;
     padding: 0 1.5rem;
-    position: absolute;
+    position: fixed;
     transition: .6s all ease;
     top: -16rem;
     right: 7rem;
@@ -56,6 +58,7 @@
 
 .Menu.open {
     transform: translateY(21rem);
+    
 }
 
 @media (max-width: 640px) {

@@ -1,9 +1,12 @@
+// Import lib
 import React from 'react'
-import ProductList from '../containers/ProductList.jsx';
+// Import components
+import Header from '@components/Header';
 
 const Layout = ({children}) => {
     return (
         <div className='Layaout'>
+            <Header/>
             {children}
         </div>
     );

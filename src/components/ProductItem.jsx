@@ -1,30 +1,45 @@
-import React, { useState } from 'react';
-
+// Import libs
+import React, { useContext, useState } from 'react';
+// Import context
+import AppContext from '../context/AppContext';
+// Import styles
 import '../styles/ProductItem/ProductItem.scss'
 import '../styles/ProductItem/ProductItem640.scss'
 
-const ProductItem = () => {
+const ProductItem = ({product}) => {
+    // context
+    const { addToCart } = useContext(AppContext);
     // States
     const [cart, setCart] = useState([]);
 
-    // Handler
-    const handleAddCart = () => {
-        setCart([]);
+    const handleAddCart = (item) => {
+        addToCart(item);
     }
 
+    const off = true
+
     return (
-        <div className="ProductItem">
+        <div className={product.off ? "off ProductItem" : "ProductItem"} onClick={console.log}>
             <picture className="ProductItem-img-container">
-                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" className="ProductItem-img" />
+                <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="ProductItem-img" 
+                />
+                <i className="far fa-info-circle ProductItem-Info-Icon"></i>
             </picture>
             <div className="ProductItem-info">
-                <div className="">
-                <p>120.00</p>
-                <p>Bike</p>
+                <p className='ProductItem-marca'>Marca</p>
+                <p className='ProductItem-name'>{product.name}</p>
+                <div className="ProductItem-prices">
+                    <p className='ProductItem-price'>Q. {product.price}</p>
+                    { product.off ? (<p className='ProductItem-old-price'>Q. {product.price}</p>) : (null)}
                 </div>
-                <figure onClick={handleAddCart} >
-                    <i className="uil uil-shopping-cart-alt"></i>
-                </figure>
+                <i className="fas fa-cart-plus ProductItem-addCart" onClick={handleAddCart} ></i>
+                {/* <button className='ProductItem-detail-btn'>
+                    <i className="uil uil-info-circle"></i>
+                    Detail
+                </button> */}
             </div>
         </div>
     );

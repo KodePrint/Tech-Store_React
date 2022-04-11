@@ -1,15 +1,21 @@
+// Import libs
 import React from 'react'
-import { useState } from 'react'
-
-import MenuMobile from '@components/MenuMobile.jsx'
-import Menu from '@components/Menu.jsx'
-
+import { useState, useContext } from 'react'
+// Import context
+import AppContext from '../context/AppContext';
+// Import components
+import MenuMobile from '@components/MenuMobile'
+import Menu from '@components/Menu'
+// Import stayles
 import '@styles/Header/Header.scss'
 import '@styles/Header/Header640.scss'
-
+import 'animate.css';
+// Import images
 import defaultUserIcon from '@images/user_default.png'
 
 const Header = () => {
+    // Context
+    const { state } = useContext(AppContext)
     // Creacion de Estados
     const [openMenu, setOpenMenu] = useState(false)
     const [toggle, setToggle] = useState(false)
@@ -44,15 +50,26 @@ const Header = () => {
                     <figure className='user-img'>
                         <img src="" alt='img' onError={noImgUserFound}></img>
                     </figure>
-                    <i className="uil uil-angle-down" />
+                    <i 
+                        className={
+                                toggle 
+                                    ? "fad fa-angle-up"
+                                    : "fad fa-angle-down"}
+                    ></i>
                 </li>
                 <li className="navbar-shopping-cart">
-                <i className="uil uil-shopping-cart-alt" />
-                    <span className="items">12</span>
+                <i className="fad fa-shopping-cart"></i>
+                    {
+                        state.cart.length > 0 
+                        ? 
+                            <span className="items animate__animated animate__backInLeft">{state.cart.length}</span> 
+                        : 
+                            null 
+                    }
                 </li>
             </ul>
+            <Menu visible={toggle} />
         </nav>
-        <Menu visible={toggle} />
         <MenuMobile/>
         </>
     );

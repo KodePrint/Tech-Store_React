@@ -30,7 +30,7 @@ body {
 }
 
 .Layaout {
-    margin-top: 7rem;
+    height: 200vh;
 }
 
 // Primary Button
@@ -143,6 +143,7 @@ body {
     z-index: 1;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     &::before {
         content: "";

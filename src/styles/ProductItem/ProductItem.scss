@@ -1,60 +1,145 @@
 @use '../global.scss' as g;
 
 .ProductItem {
+    display: flex;
     width: 100%;
-
+    margin-bottom: 3.6rem;
+    // box-shadow: .1rem .1rem 1rem rgba(0,0,0,.8);
+    border-radius: .6rem;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    
     .ProductItem-img-container {
-        width: 100%;
         display: flex;
-        justify-content: center;
+        margin-right: 2rem;
+        position: relative;
+        overflow: hidden;
 
         .ProductItem-img {
-            width: 16.5rem;
-            height: 16.5rem;
-            object-fit: cover;
-            border-radius: 2rem;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: .6s all ease;
+        }
+
+        .ProductItem-Info-Icon {
+            font-size: 6rem;
+            position: absolute;
+            top: calc(50% - 3rem);
+            left: -8rem;
             transition: .3s all ease;
+            color: g.$mint-blue;
+            text-shadow: .1rem .1rem 1rem rgba(0,0,0,.8);
+            z-index: 1;
         }
     }
     
     .ProductItem-info {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: g.$xs;
+        font-weight: bold;
+        padding: 1rem;
+        color: g.$gray;
 
-        div p:nth-child(1) {
-            font-weight: bold;
+        .ProductItem-marca {
             font-size: g.$md;
-            margin-top: 1.6rem;
-            margin-bottom: .6rem;
-            color: g.$gray;
+            margin-bottom: 1.6rem;
+            text-transform: capitalize;
         }
-        div p:nth-child(2) {
-            font-size: g.$sm;
-            margin-top: 0;
-            margin-bottom: 0;
-            color: g.$purple-gray;
+
+        .ProductItem-name {
+            font-size: g.$xs;
+            font-weight: normal;
+            text-transform: capitalize;
         }
-        figure {
-            background: g.$purple-gray;
-            border-radius: 100%;
+
+        .ProductItem-prices {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 3rem;
-            height: 3rem;
-            position: relative;
-            transition: .3s all ease;
-
-            &:hover {
-                background: g.$egg-yellow;
-            }
-
-            i:nth-child(1) {
-                color: g.$gray;
-                font-size: g.$xl;
-            }
+        }
+        
+        .ProductItem-old-price {
+            color: tomato;
+            text-decoration: line-through;
+            margin-left: 1rem;
+        }
+        .ProductItem-price {
+            font-size: g.$lg;
+            color: g.$soft-blue;
         }
 
+        .ProductItem-addCart {
+            margin-top: 1.6rem;
+            width: 100%;
+            height: 5rem;
+            font-size: g.$lg;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: g.$gray;
+            transition: .3s all ease;
+
+            &::after {
+                content: "";
+                width: 5rem;
+                height: 5rem;
+                position: absolute;
+                background: g.$egg-yellow;
+                border-radius: 100%;
+                transition: .3s all ease;
+                z-index: -1;
+            }
+            &:hover::after {
+                background: g.$soft-blue;
+            }
+        }    
+        .ProductItem-detail-btn {
+            margin: 0 auto;
+            margin-top: 1.6rem;
+            width: 10rem;
+            padding: .4rem;
+
+            i {
+                margin-right: .5rem;
+            }
+        }
+        
+    }
+
+}
+
+.off.ProductItem {
+    &::after {
+        content: "Oferta";
+        height: 2rem;
+        width: 100%;
+        background: tomato;
+        transform-style: preserve-3d;
+        position: absolute;
+        display: flex;
+        right: -43%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: 1rem;
+        transform: rotate(45deg);
+        font-weight: bold;
+        font-size: g.$xs;
+        color: white;
+        transition: .3s all ease;
+        box-shadow: .1rem .1rem 1rem rgba(0,0,0,.2);
+    }
+
+    &:hover::after {
+        font-size: calc(g.$xs * 1.2);
     }
 }

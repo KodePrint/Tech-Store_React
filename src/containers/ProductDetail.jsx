@@ -1,8 +1,14 @@
+// Import libs
 import React from 'react'
+// Import components
+import ProductInfo from '../components/ProductInfo';
 
 const ProductDetail = () => {
     return (
-        <div className=""></div>
+        <aside className="product-detail">
+            <i className="close-btn uil uil-times-circle" />
+            <ProductInfo/>
+        </aside>
     );
 }
 
