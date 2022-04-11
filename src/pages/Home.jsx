@@ -6,7 +6,7 @@ import ProductList from '../containers/ProductList';
 const Home = () => {
     return (
         <div className="Home">
-            Home
+            <ProductList/>
         </div>
     );
 }

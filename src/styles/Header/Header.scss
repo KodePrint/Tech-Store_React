@@ -11,6 +11,7 @@
     position: fixed;
     background: white;
     top: 0;
+    z-index: 100;
 
     .burguer-btn {
         height: 4rem;
@@ -113,9 +114,10 @@
         .email {
             display: none;
             align-items: center;
-            margin-right: 1rem;
+            padding-right: 1rem;
             color: g.$purple-gray;
             cursor: pointer;
+            background: white;
 
             .user-img {
                 width: 5rem;
